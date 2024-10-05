@@ -1,0 +1,7 @@
+<!-- templates/index.html -->
+{% extends "base.html" %} {% block content %}
+<p>Welcome to Snail Dot Faith!</p>
+<button hx-get="/update" hx-target="#content" hx-swap="outerHTML">
+  Get Update
+</button>
+{% endblock %}
