@@ -11,4 +11,4 @@ def hello_world() -> str:
 
 @app.route("/update")
 def update() -> str:
-    return f"<p><3 i love snails 🐌  (and here's your random number: {randint(0, 100)})</p>"
+    return f"🐌 {randint(0, 100)}</p>"
