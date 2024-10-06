@@ -11,4 +11,4 @@ def hello_world() -> str:
 
 @app.route("/update")
 def update() -> str:
-    return render_template("button_response.html", randnum=str(randint(0, 100)))
+    return f"🐌 {randint(68, 71)} 🐌"
