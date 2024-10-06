@@ -11,4 +11,4 @@ def hello_world() -> str:
 
 @app.route("/update")
 def update() -> str:
-    return f"<p>Here's your dynamic update! 🐌  (and here's your random number: {randint(0, 100)})</p>"
+    return f"<p>🐌  (and here's your random number: {randint(0, 100)})</p>"
