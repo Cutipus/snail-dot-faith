@@ -6,9 +6,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1>{{ heading }}</h1>
-    <div id="content">{% block content %}{% endblock %}</div>
+  <body class="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600">
+    <h1 class="text-3xl font-bold text-center mx-auto">{{ heading }}</h1>
+    <div id="content" class="mx-auto text-center">
+      {% block content %}{% endblock %}
+    </div>
   </body>
 </html>
