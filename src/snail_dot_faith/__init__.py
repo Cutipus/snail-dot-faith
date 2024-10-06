@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from random import randint
 
 app = Flask(__name__)
 
@@ -10,4 +11,4 @@ def hello_world() -> str:
 
 @app.route("/update")
 def update() -> str:
-    return "<p>Here’s your dynamic update! 🐌</p>"
+    return f"<p>Here's your dynamic update! 🐌  (and here's your random number: {randint(0, 100)})</p>"
