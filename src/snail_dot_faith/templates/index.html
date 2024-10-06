@@ -1,16 +1,13 @@
-<!-- templates/index.html -->
 {% extends "base.html" %} {% block content %}
-<div id="bfr-clck">
-  <p id="snail-paragraph">
-    Welcome to the Church of Snail! Begin your journey by generating some snails
-  </p>
-  <button
-    class="bg-red-600 hover:bg-red-700 text-green-500 font-bold p-1 rounded"
-    hx-get="/update"
-    hx-target="#snail-paragraph"
-    hx-swap="innerHTML"
-  >
-    Generate random snail
-  </button>
-</div>
+<p id="snail-paragraph">
+  Welcome to the Church of Snail! Begin your journey by generating some snails
+</p>
+<button
+  class="bg-red-600 hover:bg-red-700 text-green-500 font-bold p-1 rounded"
+  hx-get="/update"
+  hx-target="#snail-paragraph"
+  hx-swap="innerHTML"
+>
+  Generate random snail
+</button>
 {% endblock %}
