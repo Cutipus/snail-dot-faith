@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world() -> str:
-    return render_template("index.html", title="Snail Church", heading="Church of Snail")
+    return render_template("index.html", title="Snail Church", heading="Regular")
 
 
 @app.route("/update")
