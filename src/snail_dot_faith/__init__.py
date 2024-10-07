@@ -15,3 +15,8 @@ def update() -> str:
     dicenum: int = randint(1, 6)
     rand: str = str(time.time())
     return render_template("dice.html", dice_num=str(dicenum), rand=rand)
+
+
+@app.route("/whoami")
+def who_am_i() -> str:
+    return render_template("about-me.html", title="About Me", heading="Cutipus")
