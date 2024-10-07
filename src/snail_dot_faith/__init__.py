@@ -1,5 +1,5 @@
 import time
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 from random import randint
 
 app = Flask(__name__)
@@ -14,8 +14,4 @@ def index() -> str:
 def update() -> str:
     dicenum: int = randint(1, 6)
     rand: str = str(time.time())
-    if "Firefox" in str(request.user_agent):
-        # see https://bugzilla.mozilla.org/show_bug.cgi?id=129986
-        return render_template("dice-firefox.html", dice_num=str(dicenum), rand=rand)
-    else:
-        return render_template("dice.html", dice_num=str(dicenum))
+    return render_template("dice.html", dice_num=str(dicenum), rand=rand)
