@@ -1,13 +1,13 @@
 {% extends "base.html" %} {% block content %}
-<p id="snail-paragraph">
-  Welcome to the Church of Snail! Begin your journey by generating some snails
-</p>
 <button
-  class="bg-red-600 hover:bg-red-700 text-green-500 font-bold p-1 rounded"
+  class="bg-slate-700 hover:bg-red-700 text-green-500 text-xl p-3 rounded-xl"
   hx-get="/update"
-  hx-target="#snail-paragraph"
-  hx-swap="innerHTML"
+  hx-target="#dicegif"
+  hx-swap="outerHTML"
 >
-  Generate random snail
+  🎲
 </button>
+<div class="mx-auto w-[256px] h-[256px]">
+  <img id="dicegif" src="{{ url_for('static', filename='dice/empty.png') }}" />
+</div>
 {% endblock %}
